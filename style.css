@@ -1,3 +1,9 @@
+@media (max-width: 768px) {
+    .checkbox-group {
+        flex-direction: column; /* يخليهم تحت بعض */
+        gap: 10px;
+    }
+}
 body{
     display: flex;
     justify-content: center;
