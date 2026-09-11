@@ -1,42 +1,37 @@
-# Demo Link:
-Link : [Click Here](https://darksnake288-pixel.github.io/Custom-Checkbox-Todo-List-/)
-# CheckBox
+# Custom Checkbox Todo List
 
-A small front-end practice project demonstrating a styled HTML checkbox interface. The page uses a minimal layout to present a list of topic checkboxes with a decorative ribbon header.
+Styled checklist UI that looks like a paper folder with a ribbon. Items use custom checkboxes and labels. Pure HTML and CSS (no JavaScript).
 
-## Project Overview
+**Live pages:** [github.io/Custom-Checkbox-Todo-List-](https://darksnake288-pixel.github.io/Custom-Checkbox-Todo-List-/)
 
-- **HTML**: `index.html` contains the checkbox list and page structure.
-- **CSS**: `style.css` defines the layout, ribbon styling, and visual presentation.
-- **Purpose**: Practice building a clean, centered UI with custom checkbox labels and a decorative ribbon element.
+## Features
 
-## Preview
+- Folder-style card with a ribbon title
+- Custom checkbox appearance
+- Three sample programming topics as list items
 
-The page displays a centered card with three checkbox items and a ribbon label at the top-left. This layout is ideal for simple article or topic selection interfaces.
+## Stack
+
+- HTML5
+- CSS3
+
+## Run locally
+
+```bash
+git clone https://github.com/darksnake288-pixel/Custom-Checkbox-Todo-List-.git
+cd Custom-Checkbox-Todo-List-
+python3 -m http.server 8080
+```
+
+Open `http://localhost:8080`, or open `index.html` in a browser.
 
 ## Files
 
-- `index.html` - Main page markup
-- `style.css` - Styling for layout, ribbon, and content
+| File | Role |
+| --- | --- |
+| `index.html` | Checklist markup |
+| `style.css` | Folder, ribbon, and checkbox styles |
 
-## How to Use
+## Author
 
-1. Open `index.html` in any modern web browser.
-2. Click the checkbox labels to toggle the items.
-
-## Customization
-
-To personalize the project:
-
-- Update the checkbox labels in `index.html`.
-- Adjust the card dimensions, spacing, and colors in `style.css`.
-- Add more checkbox items or new sections for additional content.
-
-## Notes
-
-- The current design is responsive to the viewport height and centers the content using flexbox.
-- The ribbon indicator is created with a pseudo-element for a polished visual effect.
-
-## License
-
-This project is open for personal learning and experimentation.
+[Youssef Adel](https://github.com/darksnake288-pixel) · Frontend developer
