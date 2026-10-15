@@ -9,6 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    min-height: 100dvh;
     padding: 20px;
     background-color: #f5f5f5;
 }
@@ -16,19 +17,18 @@ body {
 .folder {
     width: 100%;
     max-width: 700px;
-    height: auto;
-    min-height: 600px;
+    min-height: min(600px, calc(100dvh - 40px));
     background-color: #eee;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    padding: 20px;
+    padding: 26px 20px 40px;
 }
 
 .ribbon {
-    /* تنسيق المستطيل الأساسي */
     display: inline-block;
     background-color: #00897b; /* اللون الأخضر */
     color: white;
@@ -37,9 +37,7 @@ body {
     font-weight: bold;
     font-size: 24px;
     position: relative; /* ضروري عشان نحدد مكان المثلث بالنسبة للمستطيل */
-    margin-left: 20px; /* مسافة عشان المثلث يظهر */
-    top: -250px;
-    right: 1px;
+    margin-left: 19px;
     white-space: nowrap;
 }
 
@@ -49,26 +47,17 @@ body {
     position: absolute;
     left: 0;
     bottom: -15px; /* ننزله تحت المستطيل */
-
-    /* رسم المثلث باستخدام الحدود */
     border-left: 15px solid transparent;
     border-top: 15px solid #004d40; /* لون أغمق شوية عشان يدي ظل */
 }
 
 .content {
-    transform: translate(-170px, -160px);
-    margin: 20px;
-    padding: 50px;
-    white-space: normal;
+    margin-top: 32px;
+    padding: 0 0 0 45px;
     width: 100%;
-}
-
-.checkbox1 {
-    display: block;
-    margin-bottom: 40px;
-    padding-bottom: 10px;
-    font-size: 18px;
-    font-family: sans-serif;
+    max-width: 420px;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
 }
 
 .txt-checkbox {
@@ -77,66 +66,41 @@ body {
     text-decoration: line-through;
 }
 
-.checkbox-group {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
 /* ============ Tablets (768px and below) ============ */
 @media (max-width: 768px) {
     .folder {
-        width: 100%;
-        min-height: auto;
-        padding: 15px;
+        padding: 20px 15px 30px;
     }
 
     .ribbon {
         font-size: 20px;
         padding: 8px 20px;
-        top: -200px;
         margin-left: 15px;
     }
 
     .content {
-        transform: translate(-120px, -120px);
-        margin: 10px;
-        padding: 30px;
-        white-space: normal;
-    }
-
-    .checkbox1 {
-        margin-bottom: 30px;
-        font-size: 16px;
+        padding-left: 35px;
     }
 
     .txt-checkbox {
         font-size: 16px;
     }
-
-    .checkbox-group {
-        flex-direction: column; /* يخليهم تحت بعض */
-        gap: 10px;
-    }
 }
 
-/* ============ Small Tablets & Large Phones (480px and below) ============ */
+/* ============ Phones (480px and below) ============ */
 @media (max-width: 480px) {
     body {
         padding: 10px;
     }
 
     .folder {
-        width: 100%;
-        min-height: 500px;
-        padding: 10px;
+        min-height: calc(100dvh - 20px);
+        padding: 16px 10px 24px;
     }
 
     .ribbon {
         font-size: 18px;
         padding: 8px 15px;
-        top: -180px;
         margin-left: 10px;
     }
 
@@ -147,25 +111,13 @@ body {
     }
 
     .content {
-        transform: translate(-80px, -100px);
-        margin: 5px;
-        padding: 20px;
-        white-space: normal;
-    }
-
-    .checkbox1 {
-        margin-bottom: 25px;
-        padding-bottom: 8px;
-        font-size: 15px;
+        margin-top: 26px;
+        padding-left: 22px;
+        max-width: none;
     }
 
     .txt-checkbox {
         font-size: 15px;
-    }
-
-    .checkbox-group {
-        flex-direction: column;
-        gap: 8px;
     }
 }
 
@@ -174,34 +126,14 @@ body {
     .ribbon {
         font-size: 16px;
         padding: 6px 12px;
-        top: -150px;
         margin-left: 8px;
     }
 
     .content {
-        transform: translate(-60px, -80px);
-        padding: 15px;
-        margin: 0;
-    }
-
-    .checkbox1 {
-        margin-bottom: 20px;
-        font-size: 14px;
+        padding-left: 18px;
     }
 
     .txt-checkbox {
         font-size: 14px;
-    }
-}
-
-/* ============ Large Screens (1024px and above) ============ */
-@media (min-width: 1024px) {
-    .folder {
-        width: 700px;
-        height: 600px;
-    }
-
-    .content {
-        padding: 50px;
     }
 }
